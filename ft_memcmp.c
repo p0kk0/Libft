@@ -6,7 +6,7 @@
 /*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:51:12 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/07 17:01:58 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/04/18 20:53:24 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (a[i] != b[i])
 			return (a[i] - b[i]);
 		i++;
-	}
-	if (i != n)
-	{
-		return (a[i] - b[i]);
 	}
 	return (0);
 }
