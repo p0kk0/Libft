@@ -6,7 +6,7 @@
 /*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:03:30 by felsanch          #+#    #+#             */
-/*   Updated: 2023/03/01 18:23:44 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/04/23 11:26:53 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		f(i, &s[i]);
 		i++;
 	}
-	s[i] = '\0';
 }

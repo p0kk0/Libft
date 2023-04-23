@@ -6,7 +6,7 @@
 #    By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/14 17:11:55 by felsanch          #+#    #+#              #
-#    Updated: 2023/04/20 18:34:06 by felsanch         ###   ########.fr        #
+#    Updated: 2023/04/23 17:37:55 by felsanch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 		
 SRCBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
 			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c\
-			
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c  
 OBJ = $(SRC:.c=.o)
 
 OBJBONUS = $(SRCBONUS:.c=.o)

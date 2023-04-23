@@ -6,7 +6,7 @@
 /*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:19:43 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/23 18:46:36 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/04/23 11:44:17 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_itoa(int n)
 		longn = longn * (-1);
 	}
 	if (longn == 0)
-		a[0] = '0';
+		*a = '0';
 	a[tam--] = '\0';
 	while (longn > 0)
 	{
