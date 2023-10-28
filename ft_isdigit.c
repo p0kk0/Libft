@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 14:46:20 by felsanch          #+#    #+#             */
-/*   Updated: 2023/01/23 17:03:24 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 17:54:50 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-	{
 		return (1);
-	}
 	return (0);
 }

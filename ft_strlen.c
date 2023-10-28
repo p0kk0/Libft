@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:36:08 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/22 18:37:25 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 17:24:59 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	int	counter;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	counter = 0;
+	while (*str++)
+		counter++;
+	return (counter);
 }

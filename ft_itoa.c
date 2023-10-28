@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:19:43 by felsanch          #+#    #+#             */
-/*   Updated: 2023/04/23 11:44:17 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 19:06:32 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,51 +14,48 @@
 
 static size_t	ft_numbertam(long n)
 {
-	int	c;
+	int	tam;
 
-	c = 0;
+	tam = 0;
 	if (n < 0)
 	{
-		c++;
 		n = n * (-1);
+		tam++;
 		ft_numbertam(n);
 	}
 	if (n == 0)
-	{
-		c++;
-		return (c);
-	}
+		return (tam + 1);
 	while (n > 0)
 	{
 		n = n / 10;
-		c++;
+		tam++;
 	}
-	return (c);
+	return (tam);
 }
 
 char	*ft_itoa(int n)
 {
 	long	tam;
-	long	longn;
+	long	long_n;
 	char	*a;
 
-	longn = (long)n;
-	tam = ft_numbertam(longn);
+	long_n = (long)n;
+	tam = ft_numbertam(long_n);
 	a = malloc(sizeof (char) * (tam + 1));
 	if (!a)
 		return (NULL);
-	if (longn < 0)
+	if (long_n < 0)
 	{
-		a[0] = '-';
-		longn = longn * (-1);
+		*a = '-';
+		long_n = long_n * (-1);
 	}
-	if (longn == 0)
+	if (long_n == 0)
 		*a = '0';
 	a[tam--] = '\0';
-	while (longn > 0)
+	while (long_n > 0)
 	{
-		a[tam] = longn % 10 + 48;
-		longn = longn / 10;
+		a[tam] = long_n % 10 + 48;
+		long_n = long_n / 10;
 		tam--;
 	}
 	return (a);

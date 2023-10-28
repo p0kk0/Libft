@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:04:35 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/07 17:43:16 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 20:29:41 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	}
 	return (0);
 }
-/*
-int main (void)
-{
-	char	*haystack = "This way";
-	char	*needle= "is";
-	printf("%s\n", strnstr(haystack, needle, 2));
-	printf("%s", ft_strnstr(haystack, needle, 2));
-	return (0);
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:47:24 by felsanch          #+#    #+#             */
-/*   Updated: 2023/03/01 18:52:41 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 19:51:55 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	tam;
-
-	tam = ft_strlen(s);
-	write(fd, s, tam);
+	write(fd, s, ft_strlen(s));
 }

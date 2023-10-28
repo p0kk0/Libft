@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 21:36:56 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/06 16:59:56 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 20:32:29 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int	len;
 
-	i = ft_strlen((char *)s);
-	while (i >= 0)
+	len = ft_strlen((char *)s);
+	while (len >= 0)
 	{
-		if (s[i] == (char) c)
-			return ((char *)&s[i]);
-		i--;
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
+		len--;
 	}
-	return (0);
+	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char	*a;
-	char	*b;
-
-	a = "hola jocafo";
-	b = ft_strrchr(a, 'a');
-	printf("%s\n", b);
-	return (0);
-}
-*/

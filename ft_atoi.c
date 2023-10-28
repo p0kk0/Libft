@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: felsanch <felsanch@student.42.fr>          +#+  +:+       +#+        */
+/*   By: felsanch <felsanch@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:38:19 by felsanch          #+#    #+#             */
-/*   Updated: 2023/02/21 16:05:50 by felsanch         ###   ########.fr       */
+/*   Updated: 2023/10/28 17:38:27 by felsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,23 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	signo;
+	int	sign;
 	int	num;
 
-	i = 0;
-	signo = 1;
+	sign = 1;
 	num = 0;
-	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == 32)
+	while ((*str >= '\t' && *str <= '\r') || *str == 32)
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		i++;
+		if (*str == '-')
+			sign = sign * (-1);
+		str++;
 	}
-	if (str[i] == '-' || str[i] == '+')
+	while (*str >= 48 && *str <= 57)
 	{
-		if (str[i] == '-')
-			signo = signo *(-1);
-		i++;
+		num = (num * 10) + (*str - 48);
+		str++;
 	}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		num = (num * 10) + (str[i] - 48);
-		i++;
-	}
-	return (num * signo);
+	return (num * sign);
 }
